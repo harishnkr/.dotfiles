@@ -48,6 +48,5 @@ alias ls="ls -a --color"
 alias conf="l  $HOME/.config/"
 alias nz="nvim .config/zsh/.zshrc"
 
-
 alias config='/usr/bin/git --git-dir=/home/hari/dotfiles/ --work-tree=/home/hari'
 
