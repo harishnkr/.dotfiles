@@ -1,7 +1,7 @@
 #(cat ~/.cache/wal/sequences &)
 
 bindkey -e
-autoload -Uz compinit && compinit -i
+#autoload -Uz compinit && compinit -i
 autoload -U colors && colors
 
 HISTFILE=~/.histfile
@@ -20,8 +20,6 @@ setopt hist_verify
 zmodload zsh/complist
 zstyle ':completion:*' menu select=0 interactive
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-
-
 
 
 # Set the name of the static .zsh plugins file antidote will generate.
@@ -44,7 +42,6 @@ source $zsh_plugins
 
 
 
-
 source $ZDOTDIR/plugins/prompt.zsh
 
 source "$HOME/.config/lf/lfcd.sh"
@@ -59,3 +56,10 @@ bindkey "^[[3~" delete-char
 
 #source aliases
 source $ZDOTDIR/.aliases
+
+
+
+
+
+
+
