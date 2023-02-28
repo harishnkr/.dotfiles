@@ -1,0 +1,13 @@
+[Added Associations]
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;org.inkscape.Inkscape.desktop;
+application/zip=userapp-unzip-SP0LH1.desktop;userapp-unzio-E77CH1.desktop;
+text/x-python=thunar-bulk-rename.desktop;
+application/x-tar=userapp-unzip-SP0LH1.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-S9J3R1.desktop;org.telegram.desktop.desktop;
+text/plain=nvim.desktop;ranger.desktop;
+text/x-python3=nvim.desktop;ranger.desktop;
+
+[Default Applications]
+x-scheme-handler/postman=Postman.desktop
+x-scheme-handler/tg=org.telegram.desktop.desktop
+image/gif=mpv.desktop

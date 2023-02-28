@@ -1,0 +1,16 @@
+
+##Aliases
+alias r=ranger
+alias n=nvim
+alias p=pnpm
+alias yain="yay -S"
+alias yarem="yay -Rns"
+alias s="source $ZDOTDIR/.zshrc"
+alias c="calcurse"
+##alias ls="ls -a --color"
+alias conf="l  $HOME/.config/"
+alias nz="nvim $HOME/.config/zsh/.zshrc"
+alias config='/usr/bin/git --git-dir=/home/hari/dotfiles/ --work-tree=/home/hari'
+
+##temporary alias
+alias m="l $HOME/.config/polybar"
