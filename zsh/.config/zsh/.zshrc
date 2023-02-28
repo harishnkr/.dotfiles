@@ -22,19 +22,23 @@ zstyle ':completion:*' menu select=0 interactive
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 
-# Set the name of the static .zsh plugins file antidote will generate.
-zsh_plugins=${ZDOTDIR:-~}/.zsh_plugins.zsh
+ANTIDOTE_DIR=${ZDOTDIR}/.antidote
+if [ ! -d ${ANTIDOTE_DIR} ]
+then
+	(git clone --depth=1 https://github.com/mattmc3/antidote.git ${ZDOTDIR}/.antidote)
+fi
 
-# Ensure you have a .zsh_plugins.txt file where you can add plugins.
-[[ -f ${zsh_plugins:r}.txt ]] || touch ${zsh_plugins:r}.txt
+
+zsh_plugins=${ANTIDOTE_DIR}/.zsh_plugins.zsh
+
 
 # Lazy-load antidote.
 fpath+=(${ZDOTDIR:-~}/.antidote)
 autoload -Uz $fpath[-1]/antidote
 
 # Generate static file in a subshell when .zsh_plugins.txt is updated.
-if [[ ! $zsh_plugins -nt ${zsh_plugins:r}.txt ]]; then
-  (antidote bundle <${zsh_plugins:r}.txt >|$zsh_plugins)
+if [[ ! $zsh_plugins -nt ${ZDOTDIR}/.zsh_plugins.txt ]]; then
+  (antidote bundle <${ZDOTDIR}/.zsh_plugins.txt >|$zsh_plugins)
 fi
 
 # Source your static plugins file.
