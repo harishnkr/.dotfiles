@@ -1,5 +1,6 @@
 
 ##Aliases
+alias als="nvim ~/.config/zsh/.aliases"
 alias r=ranger
 alias n=nvim
 alias p=pnpm
@@ -13,4 +14,4 @@ alias nz="nvim $HOME/.config/zsh/.zshrc"
 alias config='/usr/bin/git --git-dir=/home/hari/dotfiles/ --work-tree=/home/hari'
 
 ##temporary alias
-alias m="l $HOME/.config/polybar"
+alias m="nvim ~/.config/nvim/init.vim"

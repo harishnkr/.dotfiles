@@ -1,7 +1,7 @@
 #(cat ~/.cache/wal/sequences &)
 
 bindkey -e
-#autoload -Uz compinit && compinit -i
+autoload -Uz compinit && compinit -i
 autoload -U colors && colors
 
 HISTFILE=~/.histfile
