@@ -18,7 +18,7 @@ set guioptions ""
 
 # zathurarc-dark
 
-set font "inconsolata 15"
+#set font "inconsolata 15"
 set default-bg "#000000" #00
 set default-fg "#F7F7F6" #01
 
@@ -46,7 +46,7 @@ set completion-fg "#E0E0E0" #0C
 set notification-bg "#90A959" #0B
 set notification-fg "#151515" #00
 
-set recolor "true"
+set recolor "false"
 set recolor-lightcolor "#000000" #00
 set recolor-darkcolor "#E0E0E0" #06
 set recolor-reverse-video "true"
@@ -57,10 +57,12 @@ set render-loading "false"
 set scroll-step 50
 
 
-unmap f
 map f toggle_fullscreen
 map [fullscreen] f toggle_fullscreen
 
+map i recolor
+map K zoom in
+map J zoom out
 
 set first-page-column 1:1
 set guioptions s
