@@ -4,10 +4,15 @@ map Q push '-q
 map DD delete
 
 set shell zsh
+set shellopts '-euy'
+set ifs "\n"
+set filesep "\n"  # default already
+
+
 set hidden true
 set drawbox true
 set mouse on
-
+#set icons true
 set previewer ctpv #Requires ctpv
 set cleaner ctpvclear
 &ctpv -s $id
