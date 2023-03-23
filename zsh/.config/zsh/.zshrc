@@ -21,6 +21,11 @@ zmodload zsh/complist
 zstyle ':completion:*' menu select=0 interactive
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
+#For delete key to function in st
+#function zle-line-init () { echoti smkx }
+# function zle-line-finish () { echoti rmkx }
+# zle -N zle-line-init
+# zle -N zle-line-finish
 
 ANTIDOTE_DIR=${ZDOTDIR}/.antidote
 if [ ! -d ${ANTIDOTE_DIR} ]
@@ -45,7 +50,7 @@ fi
 source $zsh_plugins
 
 
-
+# source prompt format
 source $ZDOTDIR/plugins/prompt.zsh
 
 source "$HOME/.config/lf/lfcd.sh"
