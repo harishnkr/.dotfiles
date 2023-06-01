@@ -13,8 +13,10 @@ set filesep "\n"  # default already
 
 set hidden true
 set drawbox true
-set mouse on
+set mouse true
 #set icons true
+
+set preview true
 set previewer ctpv #Requires ctpv
 set cleaner ctpvclear
 &ctpv -s $id
@@ -24,10 +26,9 @@ set cleaner ctpvclear
 map t #remove tag option for using trash
 map b tag-toggle
 
-set incsearch o 
-set incfilter o 
+set incsearch true 
+set incfilter true 
 set smartcase 
-set preview on
 set ratios '1:2:3'
 
 set scrolloff 10
@@ -72,6 +73,7 @@ cmd open ${{
     test -L $f && f=$(readlink -f $f)
     case $(file --mime-type $f -b) in
         text/* | application/json) $EDITOR $fx;;
+        application/pdf) zathura $fx ;;
         *) for f in $fx; do setsid $OPENER $f > /dev/null 2> /dev/null & done;;
     esac
 }}
