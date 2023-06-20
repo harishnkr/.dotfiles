@@ -54,7 +54,6 @@ _comps=(
 'apvlv' '_pdf'
 'archbuild' '_devtools'
 'arch-chroot' '_archinstallscripts'
-'archco' '_devtools'
 'archlinux-java' '_archlinux-java'
 'arch-nspawn' '_devtools'
 'archrelease' '_devtools'
@@ -215,7 +214,6 @@ _comps=(
 'command' '_command'
 '-command-line-' '_normal'
 'commitpkg' '_devtools'
-'communityco' '_devtools'
 'communitypkg' '_devtools'
 'community-stagingpkg' '_devtools'
 'community-testingpkg' '_devtools'
@@ -723,6 +721,7 @@ _comps=(
 'journalctl' '_journalctl'
 'jq' '_jq'
 'jrnl' '_jrnl'
+'jupyter' '_jupyter'
 'kak' '_kak'
 'kdeconnect-cli' '_kdeconnect'
 'kde-unstable-x86_64-build' '_devtools'
@@ -1081,6 +1080,7 @@ _comps=(
 'pkcon' '_pkcon'
 'pkgadd' '_pkgadd'
 'pkg-config' '_pkg-config'
+'pkgctl' '_devtools'
 'pkginfo' '_pkginfo'
 'pkgrm' '_pkgrm'
 'pkill' '_pgrep'
@@ -1180,7 +1180,6 @@ _comps=(
 'readelf' '_readelf'
 'readlink' '_readlink'
 'readonly' '_typeset'
-'rebuildpkgs' '_devtools'
 'rec' '_redis-cli'
 '-redirect-' '_redirect'
 '-redirect-,<,bunzip2' '_bzip2'
@@ -1443,7 +1442,6 @@ _comps=(
 'tload' '_tload'
 'tmux' '_tmux'
 'tmuxinator' '_tmuxinator'
-'tmuxp' '_tmuxp'
 'todo' '_devtodo'
 'todo.sh' '_todo.sh'
 'toilet' '_toilet'
@@ -1760,7 +1758,6 @@ _comps=(
 
 _services=(
 'bzcat' 'bunzip2'
-'communityco' 'archco'
 'communitypkg' 'commitpkg'
 'community-stagingpkg' 'commitpkg'
 'community-testingpkg' 'commitpkg'
@@ -1912,30 +1909,30 @@ autoload -Uz _afew _android _archinstallscripts _archlinux-java _artisan \
             _glances _golang _google _gpgconf _gtk-launch \
             _hello _hg _hledger _homestead _hostnamectl \
             _httpie _ibus _include-what-you-use _inxi _jmeter \
-            _jmeter-plugins _jonas _journalctl _jrnl _kak \
-            _kernel-install _kitchen _knife _language_codes _lf \
-            _libinput _lilypond _localectl _loginctl _lunchy \
-            _machinectl _mc _mdcat _mdless _meson \
-            _middleman _mina _mix _mkinitcpio _mpv \
-            _mssh _mussh _mvn _nano _nanoc \
-            _networkctl _nftables _ninja _nnn _node \
-            _nvimpager _nvm _oomctl _openssl _openvpn3 \
-            _optirun _opustools _paccache _pacdiff _paclist \
-            _paclog-pkglist _pacman _pacscripts _pacsearch _pacsort \
-            _pactree _parallel _paru _patool _perf \
-            _periscope _pgsql_utils _phing _pipenv _pixz \
-            _pkcon _play _pm2 _polybar _polybar_msg \
-            _port _protoc _pulseaudio _pygmentize _qmk \
-            _rails _ralio _rankmirrors _redis-cli _resolvectl \
-            _rfkill _rg _rkt _rmlint _rslsync \
-            _rspec _rsvm _rubocop _sbt _scala \
-            _scrub _sdd _sd_hosts_or_user_at_host _sd_machines _sd_outputmodes \
-            _sd_unit_files _setcap _setup.py _sfdx _shellcheck \
-            _showoff _srm _stack _subl _subliminal \
-            _supervisorctl _svm _sysdig _systemctl _systemd \
-            _systemd-analyze _systemd-delta _systemd-inhibit _systemd-nspawn _systemd-path \
-            _systemd-run _systemd-tmpfiles _tarsnap _teamocil _thor \
-            _timedatectl _tmuxinator _tmuxp _tox _trash \
+            _jmeter-plugins _jonas _journalctl _jrnl _jupyter \
+            _kak _kernel-install _kitchen _knife _language_codes \
+            _lf _libinput _lilypond _localectl _loginctl \
+            _lunchy _machinectl _mc _mdcat _mdless \
+            _meson _middleman _mina _mix _mkinitcpio \
+            _mpv _mssh _mussh _mvn _nano \
+            _nanoc _networkctl _nftables _ninja _nnn \
+            _node _nvimpager _nvm _oomctl _openssl \
+            _openvpn3 _optirun _opustools _paccache _pacdiff \
+            _paclist _paclog-pkglist _pacman _pacscripts _pacsearch \
+            _pacsort _pactree _parallel _paru _patool \
+            _perf _periscope _pgsql_utils _phing _pipenv \
+            _pixz _pkcon _play _pm2 _polybar \
+            _polybar_msg _port _protoc _pulseaudio _pygmentize \
+            _qmk _rails _ralio _rankmirrors _redis-cli \
+            _resolvectl _rfkill _rg _rkt _rmlint \
+            _rslsync _rspec _rsvm _rubocop _sbt \
+            _scala _scrub _sdd _sd_hosts_or_user_at_host _sd_machines \
+            _sd_outputmodes _sd_unit_files _setcap _setup.py _sfdx \
+            _shellcheck _showoff _srm _stack _subl \
+            _subliminal _supervisorctl _svm _sysdig _systemctl \
+            _systemd _systemd-analyze _systemd-delta _systemd-inhibit _systemd-nspawn \
+            _systemd-path _systemd-run _systemd-tmpfiles _tarsnap _teamocil \
+            _thor _timedatectl _tmuxinator _tox _trash \
             _trash-empty _trash-list _trash-put _trash-restore _udevadm \
             _udisksctl _ufw _updpkgsums _vifm _virtualbox \
             _vnstat _wemux _wg-quick _wpg _xinput \
