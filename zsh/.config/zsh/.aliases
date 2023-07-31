@@ -5,7 +5,6 @@ alias als="nvim ~/.config/zsh/.aliases"
 
 alias r=ranger
 alias n=nvim
-alias p=pnpm
 alias yain="yay -S"
 alias yarem="yay -Rns"
 alias s="source $ZDOTDIR/.zshrc"
