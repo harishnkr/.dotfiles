@@ -10,6 +10,7 @@ set shellopts '-euy'
 set ifs "\n"
 set filesep "\n"  # default already
 
+set icons
 
 set hidden true
 set drawbox true
