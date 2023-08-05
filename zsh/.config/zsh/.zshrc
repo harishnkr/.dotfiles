@@ -49,6 +49,9 @@ fi
 # Source your static plugins file.
 source $zsh_plugins
 
+#source colors and termcap
+# source $ZDOTDIR/lscolors.sh
+test -r $ZDOTDIR/dir_colors && eval $(dircolors $ZDOTDIR/dir_colors)
 
 # source prompt format
 source $ZDOTDIR/plugins/prompt.zsh

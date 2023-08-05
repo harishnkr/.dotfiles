@@ -1,3 +1,6 @@
+#Add arguments to default commands
+alias ls="ls --color=auto"
+
 
 ##Aliases
 alias als="nvim ~/.config/zsh/.aliases"
