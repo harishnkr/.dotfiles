@@ -25,4 +25,5 @@ alias nn="nvim $HOME/.config/nvim/init.lua"
 
 
 ##temporary alias
-alias m="~/mixxx/build/mixxx"
+alias varc="setsid zathura /e/Education\ stuff/CAT/CAT\ Study\ Materials/Verbal-Ability-Reading-Comprehension-for-CAT-Arun-Sharma.pdf &>/dev/null"
+alias catdir="l /e/Education\ stuff/CAT"
