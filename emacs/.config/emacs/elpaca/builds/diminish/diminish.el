@@ -1,0 +1,1 @@
+/home/hari/.config/emacs/elpaca/repos/diminish/diminish.el
