@@ -15,7 +15,6 @@ set icons
 set hidden true
 set drawbox true
 set mouse true
-#set icons true
 
 set preview true
 set previewer ctpv #Requires ctpv
@@ -23,9 +22,9 @@ set cleaner ctpvclear
 &ctpv -s $id
 &ctpvquit $id
 
-#change default mappings
-map t #remove tag option for using trash
-map b tag-toggle
+#folder shortcuts
+map gd cd ~/Downloads
+map gc cd ~/.config
 
 set incsearch true 
 set incfilter true 
@@ -73,7 +72,7 @@ cmd zip ${{
 cmd open ${{
     test -L $f && f=$(readlink -f $f)
     case $(file --mime-type $f -b) in
-        text/* | application/json) $EDITOR $fx;;
+        text/* | application/javascript | application/json) $EDITOR $fx;;
         application/pdf) zathura $fx ;;
         *) for f in $fx; do setsid $OPENER $f > /dev/null 2> /dev/null & done;;
     esac
@@ -115,10 +114,13 @@ cmd clear_trash %trash-empty
 cmd restore_trash ${{
   trash-restore
 }}
+
 # Trash mappings
-map tt trash
-map tc clear_trash
-map tr restore_trash
+# map tt trash
+# map tc clear_trash
+# map tr restore_trash
+# map t #remove tag option for using trash
+# map b tag-toggle
 
 # Git commands
 cmd git-pull ${{clear; git pull || true; echo "press ENTER"; read ENTER}}

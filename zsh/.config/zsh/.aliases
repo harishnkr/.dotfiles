@@ -23,6 +23,8 @@ alias nc="l $HOME/.config/nvim"
 alias nz="nvim $HOME/.config/zsh/.zshrc"
 alias nn="nvim $HOME/.config/nvim/init.lua"
 
+#remove pacman lock
+alias lockrm="sudo rm /var/lib/pacman/db.lck"
 
 ##temporary alias
 alias varc="setsid zathura /e/Education\ stuff/CAT/CAT\ Study\ Materials/Verbal-Ability-Reading-Comprehension-for-CAT-Arun-Sharma.pdf &>/dev/null"

@@ -25,3 +25,4 @@ export PATH="$PATH:$GEM_HOME/bin"
 
 #Add scripts to PATH
 export PATH="$HOME/.local/scripts:$PATH"
+
