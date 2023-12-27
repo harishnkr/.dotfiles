@@ -1,0 +1,277 @@
+ln -sf /usr/share/zoneinfo/Asia/Kolkata  /etc/localtime
+hwclock  --systohc
+timedatectl 
+vim /etc/locale.gen 
+vim /etc/locale.conf
+vim /etc/hostname
+ranger
+passwd 
+ls
+mount --mkdir /dev/sdb6 /boot/efi
+mount --mkdir /dev/sdb6 /boot/efi
+cat /etc/fstab 
+vim /etc/fstab 
+mount --mkdir /boot/efi/ /dev/sdb6
+exit
+ls
+cd boot
+ls
+cd efi
+ls
+pacman -S grub efibootmgr os-prober
+ranger
+pacman -S lf
+cd 
+ls
+cd /
+ls
+cd var
+ls
+pacman -S lf
+ranger
+/dev/zero
+sudo 
+sudo sudo 
+dd
+ranger
+cd /home
+ls
+/dev
+l
+ranger
+sudo dd if=/dev/zero of=/swapfile bs=1M count=1024
+sudo chmod 600 /swapfile 
+sudo chmod 600 /swapfile 
+l
+ranger
+swapon
+sudo swapon /swapfile 
+mkswap /swapfile 
+sudo swapon /swapfile 
+swapon --show
+os-prober 
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=grub
+os-prober 
+grub-mkconfig -o /boot/grub/grub.cfg
+ranger
+ranger /etc/de
+ranger /etc/default/
+grub-mkconfig -o /boot/grub/grub.cfg
+os-prober 
+grub-mkconfig -o /boot/grub/grub.cfg
+pacman -S networkmanager
+ranger
+reboot 
+reboot
+nmcli
+systemctl enable NetworkManager
+nmcli
+systemctl start NetworkManager
+nmcli
+nmcli device show
+nmtui
+cleaar
+pacman -Syu
+mount /dev/sdb6 /boot/efi
+mount /dev/sda1 /d
+mount /dev/sda2 /var
+pacman -Syu
+mount /dev/sd3 /home
+mount /dev/sda3 /home
+pacman -Syu
+pacman -Syu
+genfstab /
+nmtui
+pacman -F genfstab
+pacman -F genfstab
+pacman -Fy genfstab
+pacman -S genfstab
+genfstab
+pacman -S arch-install-scripts
+genfstab
+genfstab /
+pacman -S ntfs-3g
+pacman -S zsh
+pacman -S zsh git stow
+locale
+locale-gen
+pacman -S zsh git stow
+ranger
+pacman -F mkswap
+mkswap /swapfile
+swapon /swapfile 
+genfstab /
+mount /dev/sda1 /d
+mount /dev/sda5 /e
+mount /dev/sdb4 /c
+genfstab /
+lsblk
+cat /etc/fstab 
+genfstab / >> /etc/fstab 
+cat /etc/fstab 
+vim /etc/fstab 
+useradd -m -g users -G wheel harishnkra
+useradd -m -g users -G wheel harishnkr
+userdel harishankra
+users
+pacman -S sudo
+passwd harishnkr
+visudo 
+EDITOR=vim visudo
+reboot 
+userdel harishnkra
+l
+lf
+echo $SHELL
+l
+lf
+sudo chsh
+sudo chsh /bin/zsh
+sudo chsh
+yay -S zsh
+sudo chsh /bin/zsh
+l
+lf
+cd
+sudo chsh /bin/zsh
+sudo chsh
+l
+reboot
+sudo chsh
+l
+l
+lf
+l
+lf
+ls
+cd .config/lf
+l
+ls
+chmod +x lfcd.sh 
+l
+l
+lf
+l
+lf
+yain
+lf
+cat .zshenv 
+l
+lf
+cat .zshenv 
+lf
+cd .config/zsh/
+chmod +x zsh
+ls
+chmod +x .zshenv .zshrc
+ls
+l
+ls
+yain
+lf
+l
+lf
+cd .config/zsh
+ls
+ls -al
+chmod +x .aliases 
+l
+ls
+lf
+yain
+lf
+cat .zshenv 
+lf
+yay -Syu neovim
+lf
+echo $TERM 
+echo $Editor
+L
+l
+lf
+lf
+ls
+echo $SHELL
+chsh /bin/zsh
+sudo chsh /bin/zsh
+sudo chsh harishnkr
+sudo chsh harishnkr
+: 1703547499:0;yain awesome bspwm sxhkd
+: 1703547537:0;git clone www.github.com/harishnkr/newtonrice
+: 1703547547:0;git clone https://www.github.com/harishnkr/newtonrice
+: 1703547629:0;stow X
+: 1703547653:0;yay -F startx
+: 1703547664:0;yain xorg-xinit
+: 1703547696:0;stow sxhkd bspwm
+: 1703547709:0;yain wezterm
+: 1703547762:0;yay -F X
+: 1703547776:0;yain xorg-server
+: 1703547887:0;stow polybar picom
+: 1703548017:0;stow fonts gtk polybar picom wallpaper
+: 1703548034:0;cat sxhkdrc
+: 1703548056:0;stow wezterm
+: 1703548085:0;cd
+: 1703548088:0;cd newtonrice
+: 1703548143:0;yain feh
+: 1703548205:0;yain polybar picom mpd 
+: 1703548273:0;yain firefox
+: 1703548337:0;stow dunst emacs mimeapps
+: 1703548381:0;stow dunst emacs misc
+: 1703548572:0;yain rofi
+: 1703548605:0;stow dunst emacs misc rofi
+: 1703548616:0;stow rofi
+: 1703548638:0;yain thunar
+: 1703548810:0;yain libinput
+: 1703548843:0;yain libinput-gestures
+: 1703548881:0;yarem libinput-gestures
+: 1703548886:0;poweroff
+: 1703567480:0;startx
+: 1703579759:0;nmtui
+: 1703579822:0;yain emacs 
+: 1703579860:0;git clone harishnkr/nvim-config
+: 1703579870:0;git clone https://githhub.com/harishnkr/nvim-config
+: 1703579886:0;git clone https://github.com/harishnkr/nvim-config
+: 1703580317:0;git add .
+: 1703580340:0;git config --global user.email "hari2menon1234@gmail.com"
+: 1703580353:0;git config --global user.name "harishnkr"
+: 1703580362:0;git commit .
+: 1703580380:0;git push
+: 1703580545:0;ssh-keygen -t ed25519 -C "hari2menon1234@gmail.com"
+: 1703580598:0;cat .ssh/id_ed25519.pub
+: 1703580662:0;git clone git@github.com:harishnkr/.dotfiles.git
+: 1703580976:0;conf
+: 1703581271:0;font-cache
+: 1703581274:0;fc-
+: 1703581278:0;fc-cache
+: 1703581293:0;fc-list
+: 1703581316:0;yain less
+: 1703581321:0;fc-list | less
+: 1703582686:0;yain unzip
+: 1703582877:0;git restore 
+: 1703582891:0;git restore
+: 1703582897:0;git reset
+: 1703582907:0;git log
+: 1703582946:0;git clone git@github.com:harishnkr/newtonrice.git
+: 1703583081:0;nvim
+: 1703583108:0;git pull
+: 1703583117:0;l
+: 1703583173:0;git add . && git commit .
+: 1703583206:0;df -h
+: 1703583212:0;top
+: 1703583399:0;yainintel-ucode
+: 1703583402:0;yain intel-ucode
+: 1703583626:0;startx
+: 1703583700:0;pkill firefox
+: 1703583833:0;z
+: 1703583834:0;l
+: 1703583837:0;conf
+: 1703583924:0;n
+: 1703584009:0;l
+: 1703584015:0;sudo lf
+: 1703584046:0;sudo cat /root/.b
+: 1703584052:0;sudo cat /root/.bash_history
+: 1703584076:0;sudo cat /root/.bash_history > .dotfiles/scripts/installscript
+: 1703584077:0;l
+: 1703584169:0;cat .bash_history >> .dotfiles/scripts/.scripts/installscript
+: 1703584174:0;l
+: 1703584227:0;cat .histfile>> .dotfiles/scripts/.scripts/installscript

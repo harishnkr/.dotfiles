@@ -51,7 +51,8 @@ source $zsh_plugins
 
 #source colors and termcap
 # source $ZDOTDIR/lscolors.sh
-test -r $ZDOTDIR/dir_colors && eval $(dircolors $ZDOTDIR/dir_colors)
+DIR_COLORS_FILE="$HOME/TermRainbow/dir_colors"
+test -r $DIR_COLORS_FILE && eval $(dircolors $DIR_COLORS_FILE)
 
 # source prompt format
 source $ZDOTDIR/plugins/prompt.zsh
