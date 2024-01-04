@@ -92,10 +92,11 @@ config.colors = {
 
 }
 
+
 config.font = wezterm.font {
-    family = 'Fira Code Nerd Font',
-    harfbuzz_features = { 'zero' },
-}
+        family = 'Fira Code Nerd Font',
+        harfbuzz_features = { 'zero' },
+    }
 config.font_size = 15
 config.font_rules = {
     {
@@ -124,5 +125,8 @@ config.font_rules = {
             style = 'Italic',
         },
     },
+}
+config.font = wezterm.font_with_fallback {
+
 }
 return config

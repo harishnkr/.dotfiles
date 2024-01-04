@@ -37,7 +37,7 @@
     #   %n  progress value if set without any extra characters
     #   %%  Literal %
     # Markup is allowed
-    format = "<b>%s </b>\n%b"
+    format = "<b>%s</b>\n%b"
     alignment = left
     show_age_threshold = 60
     word_wrap = yes
@@ -50,7 +50,9 @@
     ### Icons ###
     icon_position = left
     max_icon_size = 64
-    icon_path = .icons/flattrcolor/status/24:.icons/flattrcolor/devices/48:.icons/flattrcolor/apps/scalable:.icons/flattrcolor/actions/scalable
+    icon_path = .icons/rose-pine-moon-icons/16x16/status/:.icons/rose-pine-moon-icons/16x16/devices/:.icons/rose-pine-moon-icons/16x16/legacy/
+    icon_theme = "oomox-rose-pine-moon"
+    enable_recursive_icon_lookup = true
 
     ### History ###
     sticky_history = yes

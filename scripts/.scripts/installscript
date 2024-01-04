@@ -6,43 +6,29 @@ vim /etc/locale.conf
 vim /etc/hostname
 ranger
 passwd 
-ls
 mount --mkdir /dev/sdb6 /boot/efi
 mount --mkdir /dev/sdb6 /boot/efi
 cat /etc/fstab 
 vim /etc/fstab 
 mount --mkdir /boot/efi/ /dev/sdb6
 exit
-ls
 cd boot
-ls
 cd efi
-ls
 pacman -S grub efibootmgr os-prober
 ranger
 pacman -S lf
 cd 
-ls
 cd /
-ls
 cd var
-ls
 pacman -S lf
 ranger
 /dev/zero
-sudo 
-sudo sudo 
-dd
 ranger
 cd /home
-ls
 /dev
-l
-ranger
 sudo dd if=/dev/zero of=/swapfile bs=1M count=1024
 sudo chmod 600 /swapfile 
 sudo chmod 600 /swapfile 
-l
 ranger
 swapon
 sudo swapon /swapfile 
@@ -61,16 +47,11 @@ os-prober
 grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S networkmanager
 ranger
-reboot 
 reboot
 nmcli
 systemctl enable NetworkManager
 nmcli
 systemctl start NetworkManager
-nmcli
-nmcli device show
-nmtui
-cleaar
 pacman -Syu
 mount /dev/sdb6 /boot/efi
 mount /dev/sda1 /d
@@ -110,9 +91,7 @@ cat /etc/fstab
 genfstab / >> /etc/fstab 
 cat /etc/fstab 
 vim /etc/fstab 
-useradd -m -g users -G wheel harishnkra
 useradd -m -g users -G wheel harishnkr
-userdel harishankra
 users
 pacman -S sudo
 passwd harishnkr
@@ -120,63 +99,41 @@ visudo
 EDITOR=vim visudo
 reboot 
 userdel harishnkra
-l
 lf
 echo $SHELL
-l
 lf
 sudo chsh
 sudo chsh /bin/zsh
 sudo chsh
 yay -S zsh
 sudo chsh /bin/zsh
-l
 lf
 cd
 sudo chsh /bin/zsh
 sudo chsh
-l
 reboot
 sudo chsh
-l
-l
 lf
-l
 lf
-ls
 cd .config/lf
-l
-ls
 chmod +x lfcd.sh 
-l
-l
 lf
-l
 lf
 yain
 lf
 cat .zshenv 
-l
 lf
 cat .zshenv 
 lf
 cd .config/zsh/
 chmod +x zsh
-ls
 chmod +x .zshenv .zshrc
-ls
-l
-ls
 yain
 lf
-l
 lf
 cd .config/zsh
-ls
 ls -al
 chmod +x .aliases 
-l
-ls
 lf
 yain
 lf
@@ -186,92 +143,311 @@ yay -Syu neovim
 lf
 echo $TERM 
 echo $Editor
-L
-l
 lf
 lf
-ls
 echo $SHELL
 chsh /bin/zsh
 sudo chsh /bin/zsh
 sudo chsh harishnkr
 sudo chsh harishnkr
-: 1703547499:0;yain awesome bspwm sxhkd
-: 1703547537:0;git clone www.github.com/harishnkr/newtonrice
-: 1703547547:0;git clone https://www.github.com/harishnkr/newtonrice
-: 1703547629:0;stow X
-: 1703547653:0;yay -F startx
-: 1703547664:0;yain xorg-xinit
-: 1703547696:0;stow sxhkd bspwm
-: 1703547709:0;yain wezterm
-: 1703547762:0;yay -F X
-: 1703547776:0;yain xorg-server
-: 1703547887:0;stow polybar picom
-: 1703548017:0;stow fonts gtk polybar picom wallpaper
-: 1703548034:0;cat sxhkdrc
-: 1703548056:0;stow wezterm
-: 1703548085:0;cd
-: 1703548088:0;cd newtonrice
-: 1703548143:0;yain feh
-: 1703548205:0;yain polybar picom mpd 
-: 1703548273:0;yain firefox
-: 1703548337:0;stow dunst emacs mimeapps
-: 1703548381:0;stow dunst emacs misc
-: 1703548572:0;yain rofi
-: 1703548605:0;stow dunst emacs misc rofi
-: 1703548616:0;stow rofi
-: 1703548638:0;yain thunar
-: 1703548810:0;yain libinput
-: 1703548843:0;yain libinput-gestures
-: 1703548881:0;yarem libinput-gestures
-: 1703548886:0;poweroff
-: 1703567480:0;startx
-: 1703579759:0;nmtui
-: 1703579822:0;yain emacs 
-: 1703579860:0;git clone harishnkr/nvim-config
-: 1703579870:0;git clone https://githhub.com/harishnkr/nvim-config
-: 1703579886:0;git clone https://github.com/harishnkr/nvim-config
-: 1703580317:0;git add .
-: 1703580340:0;git config --global user.email "hari2menon1234@gmail.com"
-: 1703580353:0;git config --global user.name "harishnkr"
-: 1703580362:0;git commit .
-: 1703580380:0;git push
-: 1703580545:0;ssh-keygen -t ed25519 -C "hari2menon1234@gmail.com"
-: 1703580598:0;cat .ssh/id_ed25519.pub
-: 1703580662:0;git clone git@github.com:harishnkr/.dotfiles.git
-: 1703580976:0;conf
-: 1703581271:0;font-cache
-: 1703581274:0;fc-
-: 1703581278:0;fc-cache
-: 1703581293:0;fc-list
-: 1703581316:0;yain less
-: 1703581321:0;fc-list | less
-: 1703582686:0;yain unzip
-: 1703582877:0;git restore 
-: 1703582891:0;git restore
-: 1703582897:0;git reset
-: 1703582907:0;git log
-: 1703582946:0;git clone git@github.com:harishnkr/newtonrice.git
-: 1703583081:0;nvim
-: 1703583108:0;git pull
-: 1703583117:0;l
-: 1703583173:0;git add . && git commit .
-: 1703583206:0;df -h
-: 1703583212:0;top
-: 1703583399:0;yainintel-ucode
-: 1703583402:0;yain intel-ucode
-: 1703583626:0;startx
-: 1703583700:0;pkill firefox
-: 1703583833:0;z
-: 1703583834:0;l
-: 1703583837:0;conf
-: 1703583924:0;n
-: 1703584009:0;l
-: 1703584015:0;sudo lf
-: 1703584046:0;sudo cat /root/.b
-: 1703584052:0;sudo cat /root/.bash_history
-: 1703584076:0;sudo cat /root/.bash_history > .dotfiles/scripts/installscript
-: 1703584077:0;l
-: 1703584169:0;cat .bash_history >> .dotfiles/scripts/.scripts/installscript
-: 1703584174:0;l
-: 1703584227:0;cat .histfile>> .dotfiles/scripts/.scripts/installscript
+yain awesome bspwm sxhkd
+git clone www.github.com/harishnkr/newtonrice
+git clone https://www.github.com/harishnkr/newtonrice
+stow X
+yain xorg-xinit
+stow sxhkd bspwm
+yain wezterm
+yay -F X
+yain xorg-server
+stow polybar picom
+stow fonts gtk polybar picom wallpaper
+cat sxhkdrc
+stow wezterm
+yain feh
+yain polybar picom mpd 
+yain firefox
+stow dunst emacs mimeapps
+stow dunst emacs misc
+yain rofi
+stow dunst emacs misc rofi
+stow rofi
+yain thunar
+yain libinput
+yain libinput-gestures
+yarem libinput-gestures
+poweroff
+yain emacs 
+git clone harishnkr/nvim-config
+git clone https://githhub.com/harishnkr/nvim-config
+git clone https://github.com/harishnkr/nvim-config
+git config --global user.email "hari2menon1234@gmail.com"
+git config --global user.name "harishnkr"
+git commit .
+ssh-keygen -t ed25519 -C "hari2menon1234@gmail.com"
+cat .ssh/id_ed25519.pub
+git clone git@github.com:harishnkr/.dotfiles.git
+fc-
+fc-cache
+yain less
+yain unzip
+git restore 
+git restore
+git reset
+git log
+git clone git@github.com:harishnkr/newtonrice.git
+df -h
+top
+yainintel-ucode
+yain intel-ucode
+z
+n
+sudo cat /root/.b
+sudo cat /root/.bash_history
+sudo cat /root/.bash_history > .dotfiles/scripts/installscript
+cat .bash_history >> .dotfiles/scripts/.scripts/installscript
+cat .histfile>> .dotfiles/scripts/.scripts/installscript
+ain xf86-input-synaptics
+yain xf86-input-synaptics
+yarem xf86-input-synaptics
+yain gvfs thunar-volman
+yain nm-applet
+s
+cat .zsh_plugins.zsh
+yain nvimpager
+git clone https://github.com/NikitaIvanovV/ctpv\
+
+
+ll
+sudo make uninstall
+yain ctpv-git
+yain uberzug
+yain ueberzug
+echo $DISPLAY
+which xclip
+yain xclip
+installfornvim?
+yain ripgrep
+yain zsh-completions
+compinit
+chmod +x dir_colors
+git clone git@github.com:harishnkr/TermRainbow.git
+cd TermRainbow
+xdg-user-dirs
+yain xdg-user-dirs
+pkill emacs
+yain emacs
+seq
+stow emacs
+yain xrandr
+xrandr
+emacs
+yain yad
+yain xbacklight
+hari
+nvim
+yain pipewire
+yain  xorg-xbacklight
+yain pactl pamixer
+ping google.com
+nmtui
+pkill firefox
+bspc wm -r
+yarem xf8-video-intel
+yarem xf86-video
+yarem xf86-video-intel
+yain xf86-video-intel
+pacman -F xorg
+yarem xorg-server
+pacman -Q
+yarem xrandr
+yain xorg-xrandr
+yarem xorg-xrandr
+yain pulseaudio
+yain mpv
+mpv Awolnation\ -\ Burn\ It\ Down.mp3
+clear
+lspci -v 
+lspci -v   | grep VGA
+lspci -v   | grep 3D
+dkms
+yain dkms
+dkms stauts
+dkms status
+yain pavucontrol
+pavucontrol
+pavucontrol 
+feh
+sudo xdg-user-dirs-update\
+
+stow misc
+xdg-user-dirs-update\
+
+yain network-manager-applet
+yay -F blueman-applet
+yain blueman
+stow bpytop
+yain bpytop
+n .gitignore
+yain ncmpcpp mpd mpc
+yain openssh
+systemctl enable sshd
+sshd -t
+sudo systemctl start sshd
+sudo systemctl status sshd
+ip a
+exit
+ip link
+ip -c a
+systemctl disable sshd
+systemctl stop sshd
+cat grub.cfg
+sudo cat grub.cfg
+grub-mkconfig -o grub.cfg
+sudo grub-mkconfig -o grub.cfg
+yain bibata-cursor-theme-bin
+yay -F xsetroot
+yain xorg-xsetroot
+yain acpid
+sudo systemctl status NetworkManager.service
+yain xev
+yain xorg-xev
+cat .xinitrc
+cat .xinitrc | less
+yain xf86-video-nouveau
+sudoedit 40-libinput.conf
+sudo rm 40-libinput.conf
+sudo mv 40-libinput.conf /etc/X11/xorg.conf.d/40-libinput.conf
+yarem xf86-video-nouveau
+bpytop
+yain mpdevil
+ln -sf /d/songs Music
+stow mpd
+yain mpd
+yarem mesa
+which zsh
+blueman-applet
+blueman-manager
+sudo systemctl status bluetooth.service
+sudo systemctl enable bluetooth
+yain nvidia
+yain xf86-input-libinput
+yain xorg-xinput
+libinput list-devices
+sudo libinput list-devices
+yay -S - < preinstall.txt
+pacman -Q | less
+nvim preinstall.txt
+yay -Qne
+yay -Qn
+diff $(yay -Qne) $(yay -Qe)
+yay -Qne | head
+yay -Qe | head
+pacman -Qe | head
+diff <(yay -Qne | head) <(yay -Qe | head)
+diff <(yay -Qne) <(yay -Qe)
+diff <(yay -Qe) <(yay -Qne)
+pacman -Qe
+pacman -Qne | less
+pacman -Qe | less
+pacman -Qqe | less
+pacman -Qqe > postinstall.txt
+xmodmap -pke > xmodmap.conf
+xev
+journalctl -b
+journalctl -jounal
+journalctl
+yain hyprland
+hyprland
+Hyprland
+xev -event keyboard
+logout
+yain acpi
+acpi -i
+ls -l /usr/lib/modules/6.6.8-arch1-1/kernel/drivers/acpi
+lsmod
+lsmod | grep asus
+setxkbmap -print -query
+xinput
+libinput debug-events`
+$ libinput debug-events`\
+
+ADDED Asus WMI hotkeys seat0 default group9 cap:ksudo evemu-record /dev/input/event4\
+
+yay
+libinput debug-events
+sudo libinput debug-events
+evtest
+yain evtest
+sudo evtest
+yain evemu-record
+yay -F evemu-record
+yay -F evemu
+yain evemu
+sudo evemu-record /dev/input/event8
+journalctl -b 
+sudo systemctl status
+sudo systemctl status acpid
+sudo systemctl disable acpid
+sudoedit grub.cfg
+nvim useradd
+nvim grub
+acpi_listen
+sudo acpi_listen
+sysctl -a
+sudo systemctl enable acpid
+sudoedit grub
+udev
+yay -F udev
+reboot
+journalctl -f
+sudo lf
+cat /sys/class/backlight
+cat /sys/class/backlight/intel_backlight/actual_brightness
+cat /sys/class/backlight/intel_backlight/max_brightness
+dbus-monitor
+mount /dev/sdc
+cd
+bspc -q
+bspc q
+bspc qu
+bspc quit
+yain xdotoool
+yain xdotool
+xdotool
+pamixer --
+pamixer
+yain man
+pamixer -i 5
+xdotool key XF86AudioRaiseVolume
+man pamixer
+dbus-launch
+cd newtonrice
+git status
+systemctl status mpd
+mpd
+systemctl start mpd
+sudo systemctl start mpd
+journalctl -xeu mpd.service
+fc-list | less
+font-cache
+fc-query
+fc-query icomoon
+fc-query -b 
+fc-query -b icomoon
+fc-query -b iosevka
+fc-list
+fc-list | grep harishnkr
+yay -F trash-put
+yain ntrash-cli
+yain trash-cli
+conf
+poweroff
+Hyprland
+conf
+Hyprland
+conf
+Hyprland
+ntp
+sudo systemctl enable ntpd.service
+start
+sudo ntpdate 0.us.pool.ntp.org
