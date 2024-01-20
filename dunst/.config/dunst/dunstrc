@@ -50,8 +50,7 @@
     ### Icons ###
     icon_position = left
     max_icon_size = 64
-    icon_path = .icons/rose-pine-moon-icons/16x16/status/:.icons/rose-pine-moon-icons/16x16/devices/:.icons/rose-pine-moon-icons/16x16/legacy/
-    icon_theme = "oomox-rose-pine-moon"
+    icon_theme = "rose-pine-moon-icons"
     enable_recursive_icon_lookup = true
 
     ### History ###
@@ -60,7 +59,7 @@
 
     ### Misc/Advanced ###
     dmenu = /usr/bin/rofi -show run -p dunst:
-    browser = /usr/bin/google-chrome-stable
+    browser = /usr/bin/firefox
     always_run_script = true
     title = Dunst
     class = Dunst

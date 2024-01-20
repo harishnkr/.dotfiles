@@ -1,6 +1,7 @@
 local wezterm = require 'wezterm'
 local config = {}
 
+config.enable_wayland = false
 config.color_scheme = 'rose-pine-moon'
 -- config.color_scheme = 'rose-pine-moon'
 config.use_fancy_tab_bar = false

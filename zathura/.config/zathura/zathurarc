@@ -61,8 +61,8 @@ map f toggle_fullscreen
 map [fullscreen] f toggle_fullscreen
 
 map i recolor
-map K zoom in
-map J zoom out
+# map K zoom in
+# map J zoom out
 
 set first-page-column 1:1
 set guioptions s
