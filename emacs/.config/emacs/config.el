@@ -1,4 +1,4 @@
-(defvar elpaca-installer-version 0.5)
+(defvar elpaca-installer-version 0.6)
 (defvar elpaca-directory (expand-file-name "elpaca/" user-emacs-directory))
 (defvar elpaca-builds-directory (expand-file-name "builds/" elpaca-directory))
 (defvar elpaca-repos-directory (expand-file-name "repos/" elpaca-directory))
@@ -308,7 +308,19 @@ one, an error is signaled."
   :init
   (marginalia-mode))
 
-(use-package magit)
+(defun +elpaca-unload-seq (e)
+  (and (featurep 'seq) (unload-feature 'seq t))
+  (elpaca--continue-build e))
+
+(defun +elpaca-seq-build-steps ()
+  (append (butlast (if (file-exists-p (expand-file-name "seq" elpaca-builds-directory))
+                       elpaca--pre-built-steps elpaca-build-steps))
+          (list '+elpaca-unload-seq 'elpaca--activate-package)))
+
+(use-package seq :elpaca `(seq :build ,(+elpaca-seq-build-steps)))
+(use-package magit 
+  :after seq
+  :ensure t)
 
 (setq org-agenda-start-with-log-mode t)
     (setq org-log-done 'time)
