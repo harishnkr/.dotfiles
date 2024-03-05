@@ -1,6 +1,4 @@
 
-
-
 setopt PROMPT_SUBST
 source $ZDOTDIR/plugins/gitprompt.zsh
 export PROMPT=$'\n'' %F{magenta}<%n@%m>%f %F{yellow}[%0~]%f'$'\n'' %# '

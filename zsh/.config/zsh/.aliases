@@ -1,28 +1,33 @@
 #Add arguments to default commands
 alias ls="ls --color=auto"
 
-
-##Aliases
-alias als="nvim ~/.config/zsh/.aliases"
-
+##Alias alias
+alias a="nvim ~/.config/zsh/.aliases"
 
 alias r=ranger
 alias n=nvim
 alias yain="yay -S"
 alias yarem="yay -Rns"
-alias s="source $ZDOTDIR/.zshrc"
+alias src="source $ZDOTDIR/.zshrc"
 alias c="calcurse"
-##alias ls="ls -a --color"
+alias nb="newsboat"
 # alias config='/usr/bin/git --git-dir=/home/hari/dotfiles/ --work-tree=/home/hari'
 
 #open files in lf
 alias conf="l  $HOME/.config/"
 alias nc="l $HOME/.config/nvim"
 
+#git aliases
+alias gc="git clone "
+alias gac="git add . && git commit . "
+
 #open files in nvim
 alias nz="nvim $HOME/.config/zsh/.zshrc"
+alias ne="nvim $HOME/.config/zsh/.zshenv"
 alias nn="nvim $HOME/.config/nvim/init.lua"
+alias sx="nvim ~/.config/sxhkd/sxhkdrc"
 
-#remove pacman lock
-alias lockrm="sudo rm /var/lib/pacman/db.lck"
+#remove pacman lock (use sudo)
+alias lockrm="rm /var/lib/pacman/db.lck"
 
+alias e=espeak

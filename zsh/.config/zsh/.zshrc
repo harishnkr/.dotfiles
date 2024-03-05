@@ -1,7 +1,23 @@
 #(cat ~/.cache/wal/sequences &)
 
 bindkey -e
-autoload -Uz compinit && compinit -i
+
+# On slow systems, checking the cached .zcompdump file to see if it must be 
+# regenerated adds a noticable delay to zsh startup.  This little hack restricts 
+# it to once a day.  It should be pasted into your own completion file.
+#
+# The globbing is a little complicated here:
+# - '#q' is an explicit glob qualifier that makes globbing work within zsh's [[ ]] construct.
+# - 'N' makes the glob pattern evaluate to nothing when it doesn't match (rather than throw a globbing error)
+# - '.' matches "regular files"
+# - 'mh+24' matches files (or directories or whatever) that are older than 24 hours.
+autoload -Uz compinit 
+if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
+	compinit;
+else
+	compinit -C;
+fi;
+
 autoload -U colors && colors
 
 HISTFILE=~/.histfile
@@ -27,6 +43,37 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 # zle -N zle-line-init
 # zle -N zle-line-finish
 
+
+# Declare the variable
+typeset -A ZSH_HIGHLIGHT_STYLES
+
+# stuff starting with $ is not visible
+ZSH_HIGHLIGHT_STYLES[comment]='fg=red'
+
+# source $ZDOTDIR/lscolors.sh
+DIR_COLORS_FILE="$HOME/TermRainbow/dir_colors"
+test -r $DIR_COLORS_FILE && eval $(dircolors $DIR_COLORS_FILE)
+
+# source prompt format
+source $ZDOTDIR/plugins/prompt.zsh
+
+source "$HOME/.config/lf/lfcd.sh"
+
+eval "$(tmuxifier init -)"
+
+#autoload -U history-search-end
+#zle -N history-beginning-search-backward-end 
+#zle -N history-beginning-search-forward-end 
+#
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
+bindkey "^[[3~" delete-char
+
+#source aliases
+source $ZDOTDIR/.aliases
+
+source ~/.pvt/aliases
+
 ANTIDOTE_DIR=${ZDOTDIR}/.antidote
 if [ ! -d ${ANTIDOTE_DIR} ]
 then
@@ -45,34 +92,6 @@ autoload -Uz $fpath[-1]/antidote
 if [[ ! $zsh_plugins -nt ${ZDOTDIR}/.zsh_plugins.txt ]]; then
   (antidote bundle <${ZDOTDIR}/.zsh_plugins.txt >|$zsh_plugins)
 fi
-
-# Source your static plugins file.
+# Source your static plugins file. Keep last maybe
 source $zsh_plugins
-
-#source colors and termcap
-# source $ZDOTDIR/lscolors.sh
-DIR_COLORS_FILE="$HOME/TermRainbow/dir_colors"
-test -r $DIR_COLORS_FILE && eval $(dircolors $DIR_COLORS_FILE)
-
-# source prompt format
-source $ZDOTDIR/plugins/prompt.zsh
-
-source "$HOME/.config/lf/lfcd.sh"
-
-#autoload -U history-search-end
-#zle -N history-beginning-search-backward-end 
-#zle -N history-beginning-search-forward-end 
-#
-bindkey "^[[A" history-beginning-search-backward
-bindkey "^[[B" history-beginning-search-forward
-bindkey "^[[3~" delete-char
-
-#source aliases
-source $ZDOTDIR/.aliases
-
-
-
-
-
-
 
