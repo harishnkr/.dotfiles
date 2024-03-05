@@ -2,7 +2,7 @@
 push m-
 map Q push '-q
 
-map DD delete
+map D trash
 map zd calcdirsize
 
 set shell zsh
@@ -28,7 +28,7 @@ map gc cd ~/.config
 
 set incsearch true 
 set incfilter true 
-set smartcase 
+set smartcase true
 set ratios '1:2:3'
 
 set scrolloff 10
@@ -74,6 +74,7 @@ cmd open ${{
     case $(file --mime-type $f -b) in
         text/* | application/javascript | application/json) $EDITOR $fx;;
         application/pdf) zathura $fx ;;
+        text/csv) visidata $fx ;;
         *) for f in $fx; do setsid $OPENER $f > /dev/null 2> /dev/null & done;;
     esac
 }}
@@ -110,6 +111,31 @@ cmd trash ${{
     fi
   done
 }}
+
+cmd bulk-rename ${{
+    old="$(mktemp)"
+    new="$(mktemp)"
+    if [ -n "$fs" ]; then
+        fs="$(basename -a $fs)"
+    else
+        fs="$(ls)"
+    fi
+    printf '%s\n' "$fs" >"$old"
+    printf '%s\n' "$fs" >"$new"
+    $EDITOR "$new"
+    [ "$(wc -l < "$new")" -ne "$(wc -l < "$old")" ] && exit
+    paste "$old" "$new" | while IFS= read -r names; do
+        src="$(printf '%s' "$names" | cut -f1)"
+        dst="$(printf '%s' "$names" | cut -f2)"
+        if [ "$src" = "$dst" ] || [ -e "$dst" ]; then
+            continue
+        fi
+        mv -- "$src" "$dst"
+    done
+    rm -- "$old" "$new"
+    lf -remote "send $id unselect"
+}}
+
 cmd clear_trash %trash-empty
 cmd restore_trash ${{
   trash-restore
