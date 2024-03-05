@@ -57,12 +57,19 @@ set render-loading "false"
 set scroll-step 50
 
 
-map f toggle_fullscreen
-map [fullscreen] f toggle_fullscreen
+# map f toggle_fullscreen
+# map [fullscreen] f toggle_fullscreen
 
 map i recolor
 # map K zoom in
 # map J zoom out
 
 set first-page-column 1:1
+
+
+#guioptions - Shows or hides GUI elements. 
+#If it contains 'c', the command line is displayed. 
+#If it contains 's', the statusbar is displayed. 
+#If it contains 'h', the horizontal scrollbar is displayed.
+#If it contains 'v', the vertical scrollbar is displayed.
 set guioptions s
