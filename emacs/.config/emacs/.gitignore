@@ -1,5 +1,7 @@
 elpaca/
 elpa/
+/elpa/
+/elpaca/
 transient/
 /org-roam.db
 /recentf
