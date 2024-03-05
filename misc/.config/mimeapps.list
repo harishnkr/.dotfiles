@@ -11,3 +11,4 @@ text/x-python3=nvim.desktop;ranger.desktop;
 x-scheme-handler/postman=Postman.desktop
 x-scheme-handler/tg=org.telegram.desktop.desktop
 image/gif=mpv.desktop
+x-scheme-handler/mailto=firefox.desktop
