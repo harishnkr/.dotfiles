@@ -1,0 +1,5 @@
+#options.color_menu = "black on 78 blue"
+options.color_menu = "black on 78 blue"
+options.motd_url = ""
+options.disp_sidebar = False
+
