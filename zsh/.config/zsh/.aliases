@@ -30,4 +30,6 @@ alias sx="nvim ~/.config/sxhkd/sxhkdrc"
 #remove pacman lock (use sudo)
 alias lockrm="rm /var/lib/pacman/db.lck"
 
-alias e=espeak
+#Scripts folder open
+alias scr="l $HOME/.local/scripts"
+
