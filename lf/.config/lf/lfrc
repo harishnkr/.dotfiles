@@ -25,6 +25,8 @@ set cleaner ctpvclear
 #folder shortcuts
 map gd cd ~/Downloads
 map gc cd ~/.config
+map gl cd ~/.local/
+map gf cd ~/.dotfiles/
 
 set incsearch true 
 set incfilter true 
@@ -151,9 +153,7 @@ cmd restore_trash ${{
 # Git commands
 cmd git-pull ${{clear; git pull || true; echo "press ENTER"; read ENTER}}
 cmd git-status ${{clear; git status; echo "press ENTER"; read ENTER}}
-cmd git-log ${{clear; git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit}}
 # Git mappings
 map gp git-pull
 map gs git-status
-map gl git-log
 
