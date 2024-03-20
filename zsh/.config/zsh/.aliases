@@ -11,6 +11,8 @@ alias yarem="yay -Rns"
 alias src="source $ZDOTDIR/.zshrc"
 alias c="calcurse"
 alias nb="newsboat"
+alias twtui=taskwarrior-tui
+alias lg=lazygit
 # alias config='/usr/bin/git --git-dir=/home/hari/dotfiles/ --work-tree=/home/hari'
 
 #open files in lf
@@ -32,4 +34,4 @@ alias lockrm="rm /var/lib/pacman/db.lck"
 
 #Scripts folder open
 alias scr="l $HOME/.local/scripts"
-
+alias refl="reflector --verbose -l 20 -n 20 -p http,https --sort rate --save /etc/pacman.d/mirrorlist"

@@ -1,0 +1,15 @@
+{{
+["domain"]={2},
+},
+{
+[""]={3},
+},
+{
+["application.prefer_dark_mode"]=true,
+["webview.hardware_acceleration_policy"]="never",
+["session.always_save"]=true,
+["webview.enable_smooth_scrolling"]=true,
+["webview.enable_spatial_navigation"]=true,
+["window.scroll_step"]=50,
+},
+}

@@ -103,7 +103,8 @@ st.boxdraw_braille: 1
 !------------------------------------------------------! xterm config 
 XTerm.termName: xterm-256color
 ! set font and fontsize
-XTerm*faceName: Fira Code Nerd Font:size=16:style=Regular
+XTerm*faceName: Liberation Mono:size=16:style=Regular
+! XTerm*faceName: Fira Code Nerd Font:size=16:style=Regular
 XTerm*faceSize: 16
 ! force utf-8
 XTerm.vt100.locale: false
