@@ -1,0 +1,10 @@
+# [Created by task 2.6.2 2/21/2024 15:17:28]
+# Taskwarrior program configuration file.
+# For more documentation, see https://taskwarrior.org or try 'man task', 'man task-color',
+# 'man task-sync' or 'man taskrc'
+
+data.location=~/.task
+
+weekstart=monday
+
+default.project=Inbox
