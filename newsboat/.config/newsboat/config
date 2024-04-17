@@ -4,7 +4,6 @@ unbind-key k
 unbind-key J
 unbind-key K
 
-
 bind-key j next
 bind-key k prev
 bind-key J next-feed
@@ -62,3 +61,8 @@ itemview-title-format "%T (%u unread, %t total)"
 #notification
 notify-always yes
 notify-program notify-send
+
+# Reload threads
+reload-threads 3
+
+bookmark-cmd bukumark.sh
