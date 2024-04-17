@@ -73,21 +73,6 @@ deleteMenu () {
         fi
 
 # Buku asks for confirmation before deleting tag from all bookmars and --tacit does nothing. I'm disabling this feature.
-: << 'END'
-    elif [[ $mode == "tags" ]]; then
-        delask=$(echo -e "1. Yes\n2. No" | _rofi -p '> ' -mesg "Really delete tag?")
-        val=$?
-        if [[ $val -eq 1 ]]; then
-            exit
-        elif [[ $val -eq 0 ]]; then
-            if [[ $delask == "1. Yes" ]]; then
-                buku --nostdin --replace "${menu}"
-                mode=tags main
-            elif [[ $delask == "2. No" ]]; then
-                mode=tags main
-            fi
-        fi
-END
     # alternative code
     elif [[ $mode == "tags" ]]; then
         mode=tags main
