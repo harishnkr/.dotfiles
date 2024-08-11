@@ -29,6 +29,12 @@ alias ne="nvim $HOME/.config/zsh/.zshenv"
 alias nn="nvim $HOME/.config/nvim/init.lua"
 alias sx="nvim ~/.config/sxhkd/sxhkdrc"
 
+# function to convert read md files
+function md() {
+  pandoc $1 > /tmp/$1.html
+  xdg-open /tmp/$1.html
+}
+
 #remove pacman lock (use sudo)
 alias lockrm="rm /var/lib/pacman/db.lck"
 
