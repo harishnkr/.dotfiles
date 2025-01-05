@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# script to run a webcam window
+ffplay -f v4l2 -i /dev/video0 -vf "hflip"
