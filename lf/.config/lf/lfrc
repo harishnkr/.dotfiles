@@ -27,7 +27,7 @@ map gd cd ~/Downloads
 map gc cd ~/.config
 map gl cd ~/.local/
 map gf cd ~/.dotfiles/
-map gn cd ~/Notes/
+map gn cd ~/Sync/Notes/
 
 set incsearch true 
 set incfilter true 

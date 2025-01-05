@@ -4,7 +4,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export LANG=en_US.UTF-8
 export VISUAL="nvim"
 export EDITOR="nvim"
-export BROWSER="firefox"
+export BROWSER="librewolf"
 export QT_QPA_PLATFORMTHEME=qt5ct
 export PAGER=nvimpager
 # export PAGER=less
@@ -33,3 +33,5 @@ export PATH="$HOME/.config/tmux/plugins/tmuxifier/bin:$PATH"
 #Add scripts to PATH
 export PATH="$HOME/.local/scripts:$PATH"
 
+#Add doom emacs path
+export PATH="$HOME/.config/emacs/bin:$PATH"
