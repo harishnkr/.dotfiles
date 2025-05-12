@@ -72,7 +72,6 @@ bindkey "^[[3~" delete-char
 #source aliases
 source $ZDOTDIR/.aliases
 
-source ~/.pvt/aliases
 
 ANTIDOTE_DIR=${ZDOTDIR}/.antidote
 if [ ! -d ${ANTIDOTE_DIR} ]
