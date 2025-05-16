@@ -122,3 +122,11 @@ projectile-project-search-path '("~/")
 (define-key evil-visual-state-map (kbd "C-a") 'evil-numbers/inc-at-pt)
 (define-key evil-normal-state-map (kbd "C-x") 'evil-numbers/dec-at-pt)
 (define-key evil-visual-state-map (kbd "C-x") 'evil-numbers/dec-at-pt)
+
+(after! ein
+;; Open notebook in same window
+  (setf (alist-get "\\*ein:.*\\.ipynb\\*" display-buffer-alist nil nil #'equal)
+        '((display-buffer-same-window)))
+
+  (add-hook 'ein:notebook-mode-hook #'evil-normalize-keymaps)
+  (add-hook 'ein:notebook-mode-hook #'evil-local-mode))
