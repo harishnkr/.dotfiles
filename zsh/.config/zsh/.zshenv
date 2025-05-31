@@ -35,3 +35,4 @@ export PATH="$HOME/.local/scripts:$PATH"
 
 #Add doom emacs path
 export PATH="$HOME/.config/emacs/bin:$PATH"
+export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
