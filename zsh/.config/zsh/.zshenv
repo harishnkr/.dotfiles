@@ -18,6 +18,11 @@ export PATH="$HOME/.local/bin:$PATH"
 export npm_config_prefix="$HOME/.local"
 #npm end
 
+# Usual XDG Paths
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+
+
 #android variables
 export ANDROID_HOME=/opt/android-sdk
 export PATH=$PATH:$ANDROID_HOME/tools
