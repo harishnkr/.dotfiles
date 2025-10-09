@@ -4,7 +4,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export LANG=en_US.UTF-8
 export VISUAL="nvim"
 export EDITOR="nvim"
-export BROWSER="librewolf"
+export BROWSER="firefox"
 export QT_QPA_PLATFORMTHEME=qt5ct
 export PAGER=nvimpager
 # export PAGER=less
@@ -17,6 +17,9 @@ export GREP_COLOR='1;33'
 export PATH="$HOME/.local/bin:$PATH"
 export npm_config_prefix="$HOME/.local"
 #npm end
+
+#cargo
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # Usual XDG Paths
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -41,3 +44,6 @@ export PATH="$HOME/.local/scripts:$PATH"
 #Add doom emacs path
 export PATH="$HOME/.config/emacs/bin:$PATH"
 export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
+
+#developing wofi-pass
+export PATH="$HOME/wofi-pass:$PATH"
