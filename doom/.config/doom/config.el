@@ -22,7 +22,7 @@
 ;; accept. For example:
 ;;
 (setq doom-font (font-spec :family "Fira Code" :size 18 :weight 'semi-light)
-     doom-variable-pitch-font (font-spec :family "Fira Sans" :size 20))
+      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 20))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -75,8 +75,8 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 (setq
-projectile-project-search-path '("~/")
-)
+ projectile-project-search-path '("~/")
+ )
 ;; Add LilyPond major mode
 (use-package! lilypond-mode
   :mode "\\.ly\\'"
@@ -124,31 +124,13 @@ projectile-project-search-path '("~/")
 (define-key evil-visual-state-map (kbd "C-x") 'evil-numbers/dec-at-pt)
 
 (after! ein
-;; Open notebook in same window
+  ;; Open notebook in same window
   (setf (alist-get "\\*ein:.*\\.ipynb\\*" display-buffer-alist nil nil #'equal)
         '((display-buffer-same-window)))
 
   (add-hook 'ein:notebook-mode-hook #'evil-normalize-keymaps)
   (add-hook 'ein:notebook-mode-hook #'evil-local-mode))
 
-;; start of research config
-;; Set your main Org directory
-(setq org-directory "~/research/ai/")
-
-;; Org Agenda files
-(setq org-agenda-files '("~/research/ai/05_tasks/"
-                         "~/research/ai/00_inbox/"))
-
-;; Org Capture Templates
-(after! org
-  (setq org-capture-templates
-        '(("r" "Research Idea" entry
-           (file+headline "~/research/ai/00_inbox/inbox.org" "Ideas")
-           "* TODO %?\nCREATED: %U\n")
-          ("p" "Paper Summary" entry
-           (file "~/research/ai/01_lit_review/papers.org")
-           "* %^{Paper Title}\n:PROPERTIES:\n:AUTHOR: %^{Author}\n:YEAR: %^{Year}\n:CATEGORY: %^{Category}\n:END:\nSummary:\n%?")
-          )))
 
 ;; Org Babel Languages
 (after! org
@@ -158,24 +140,6 @@ projectile-project-search-path '("~/")
      (shell . t)
      (latex . t))))
 
-;; Org-Roam Configuration
-(use-package! org-roam
-  :custom
-  (org-roam-directory (file-truename "~/research/ai/02_notes/"))
-  (org-roam-database-connector 'sqlite)
-  (org-roam-completion-everywhere t)
-  :config
-  (org-roam-db-autosync-mode))
-
-;; Org-Roam Capture Templates
-(after! org-roam
-  (setq org-roam-capture-templates
-        '(("d" "default" plain "%?"
-           :target (file+head "note-${slug}.org"
-                              "#+title: ${title}\n#+filetags: :ai:\n")
-           :unnarrowed t))))
-
-
 ;; Open PDFs and Images with external viewer if needed
 (setq org-file-apps
       '(("\\.pdf\\'" . "xdg-open %s")
@@ -184,9 +148,5 @@ projectile-project-search-path '("~/")
         ("\\.svg\\'" . "xdg-open %s")
         (auto-mode . emacs)))
 
-;; Avoid sync bloat: store images/pdfs in separate dir
-(setq org-attach-id-dir "~/research/ai/media/")
-
 ;; Optional: reduce large image previews in buffer
 (setq org-image-actual-width 800)
-;; end of research config
