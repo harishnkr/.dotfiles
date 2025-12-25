@@ -105,6 +105,8 @@
 (setq org-roam-directory "~/Sync/Notes/")
 (setq org-roam-file-exclude-regexp ".*\\.gpg$")
 
+(setq display-line-numbers-type 'relative)
+
 (after! org
   (require 'ox-pandoc))
 (map! :leader
@@ -150,3 +152,13 @@
 
 ;; Optional: reduce large image previews in buffer
 (setq org-image-actual-width 800)
+;;
+;; OPTIONAL configuration
+(setq
+ gptel-model 'codellama:latest
+ gptel-backend (gptel-make-ollama "Ollama"
+                 :host "localhost:11434"
+                 :stream t
+                 :models '(codellama:latest)))
+(use-package! ox-reveal
+  :after org)

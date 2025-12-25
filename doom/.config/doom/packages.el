@@ -61,3 +61,5 @@
 (package! org-reveal)
 (package! citar)
 (package! evil-numbers)
+(package! gptel :recipe (:nonrecursive t))
+(package! hledger-mode)
