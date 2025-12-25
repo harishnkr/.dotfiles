@@ -1,3 +1,4 @@
+
 #quit to current directory
 push m-
 map Q push '-q
@@ -19,6 +20,7 @@ set mouse true
 set preview true
 set previewer ctpv #Requires ctpv
 set cleaner ctpvclear
+# set previewer pistol
 &ctpv -s $id
 &ctpvquit $id
 
@@ -36,6 +38,8 @@ set ratios '1:2:3'
 
 set scrolloff 10
 
+# sort particular folder by time
+setlocal ~/Downloads/ sortby time; set reverse; set info time
 
 # extract the current file with the right command
 # (xkcd link: https://xkcd.com/1168/)
@@ -59,6 +63,12 @@ cmd tar ${{
     tar czf $1.tar.gz $1
     rm -rf $1
 }}
+
+# map f ${{
+#     selected="$(fzf)"
+#     [ -d "$selected" ] && cmd=cd || cmd=select
+#     lf -remote "send $id $cmd '$selected'"
+# }}
 
 # compress current file or selected files with zip
 cmd zip ${{
