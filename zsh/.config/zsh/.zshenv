@@ -47,3 +47,6 @@ export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
 
 #developing wofi-pass
 export PATH="$HOME/wofi-pass:$PATH"
+
+#hledger path
+export LEDGER_FILE="$HOME/ledger/journal.hledger"
